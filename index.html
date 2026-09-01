@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ホール本番日カレンダー｜公立文化ホールの催し物案内を本番日順に横断</title>
+<meta name="description" content="公立文化ホールが公開している催し物案内・貸館予定から、本番日・館名・ホール名・催事名・主催団体という事実だけを取り出して本番日順に並べたカレンダー。54件・5館を掲載。">
+<meta name="robots" content="index,follow">
+<style>
+:root{--bg:#f5f2ec;--panel:#fff;--ink:#211d18;--sub:#6b6259;--ac:#8a4b2a;--ac2:#b8763f;--line:#e3dbd0;--up:#b3261e;--down:#3a6ea5;--rev:#7a3fa8}
+@media(prefers-color-scheme:dark){:root{--bg:#16130f;--panel:#201c17;--ink:#ece5db;--sub:#a4988a;--ac:#d69a6a;--ac2:#b8763f;--line:#332c24;--up:#f08a80;--down:#8ab6e8;--rev:#c69ae8}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.7;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;font-size:15px}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+header{background:linear-gradient(135deg,#3d2317,#7a4526);color:#fff;padding:30px 0 26px}
+header h1{margin:0;font-size:22px;letter-spacing:.02em}
+header .tag{margin-top:10px;font-size:13.5px;opacity:.93;line-height:1.75}
+.stats{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.stats span{background:rgba(255,255,255,.14);border-radius:999px;padding:4px 12px;font-size:12.5px}
+main{padding:22px 0 50px}
+h2{font-size:16px;margin:30px 0 10px;padding-left:10px;border-left:4px solid var(--ac)}
+.lede{font-size:13px;color:var(--sub);margin:0 0 14px}
+.filters{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:16px}
+.filters div{margin:5px 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.filters b{font-size:12px;color:var(--sub);min-width:62px}
+.filters button{font:inherit;font-size:12.5px;padding:3px 11px;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;cursor:pointer}
+.filters button.on{background:var(--ac);border-color:var(--ac);color:#fff}
+.ev{display:flex;gap:13px;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px;margin:9px 0}
+.ev.hide{display:none}
+.d{flex:0 0 58px;text-align:center;border-right:1px solid var(--line);padding-right:10px}
+.d b{display:block;font-size:19px;color:var(--ac);line-height:1.25}
+.d span{font-size:11px;color:var(--sub)}
+.b{flex:1;min-width:0}
+.b h3{margin:0 0 5px;font-size:15.5px;line-height:1.5;word-break:break-word}
+.m1{font-size:13px;color:var(--ink)}
+.pref{color:var(--sub)}
+.m2{font-size:12.5px;color:var(--sub);margin-top:2px}
+.none{opacity:.75}
+.tags{margin-top:7px;display:flex;flex-wrap:wrap;gap:5px}
+.t{font-size:11.5px;border-radius:5px;padding:2px 8px;border:1px solid var(--line);color:var(--sub)}
+.t.lead{border-color:var(--ac2);color:var(--ac2)}
+.t.seat{border-color:var(--line)}
+.t.up{border-color:var(--up);color:var(--up);font-weight:600}
+.t.down{border-color:var(--down);color:var(--down)}
+.t.cyc.rev{border-color:var(--rev);color:var(--rev);font-weight:600}
+.prev{margin-top:6px;font-size:12px;color:var(--sub);border-left:2px solid var(--line);padding-left:8px}
+.src{margin-top:7px;font-size:12px}
+.src a{color:var(--ac);text-decoration:none;font-weight:600}
+.src a:hover{text-decoration:underline}
+.col{color:var(--sub);font-size:11.5px}
+.watch{background:var(--panel);border:1px solid var(--ac2);border-radius:11px;padding:14px;margin-bottom:8px}
+.watch .ev{border:none;background:transparent;padding:8px 0;margin:0;border-bottom:1px dashed var(--line)}
+.watch .ev:last-child{border-bottom:none}
+.note{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;font-size:12.5px;color:var(--sub);line-height:1.85}
+.note h3{margin:0 0 6px;font-size:13.5px;color:var(--ink)}
+.note ul{margin:6px 0 0;padding-left:1.2em}
+footer{border-top:1px solid var(--line);padding:20px 0 40px;font-size:12px;color:var(--sub);line-height:1.9}
+@media(max-width:520px){.d{flex:0 0 46px}.d b{font-size:17px}header h1{font-size:19px}}
+</style></head>
+<body>
+<header><div class="wrap">
+  <h1>ホール本番日カレンダー</h1>
+  <div class="tag">公立文化ホールが公開している「催し物案内・貸館予定」から、本番日・館名・ホール名・催事名・主催団体という事実だけを取り出して、本番日までの残月数の順に並べたカレンダーです。掲載しているのは各館の公表内容と出典ページへのリンクだけです。</div>
+  <div class="stats">
+    <span>本番予定 54件</span>
+    <span>5館</span>
+    <span>主催団体 25（名寄せ後）</span>
+    <span>2026-09-01 時点</span>
+  </div>
+</div></header>
+
+<main><div class="wrap">
+
+<h2>本番までの残りが長く、周辺の発注がこれからとみられる本番日</h2>
+<p class="lede">今回集まった範囲では、この条件に当てはまる本番日はありませんでした。掲載中の54件のうち51件が本番まで3か月未満です。多くの館の催し物案内は当月〜翌月分しか掲載しておらず、半年〜1年先まで載せているのは貸館予定表を別に公開している館に限られます。この欄が埋まるのは、そうした館を集めてからです。件数合わせのために基準を下げることはしません。</p>
+
+<h2>本番日カレンダー（本番日の早い順）</h2>
+<div class="filters">
+  <div><b>都道府県</b><button class="on" data-f="pref" data-v="">すべて</button><button data-f="pref" data-v="千葉県">千葉県</button><button data-f="pref" data-v="岐阜県">岐阜県</button><button data-f="pref" data-v="東京都">東京都</button><button data-f="pref" data-v="神奈川県">神奈川県</button></div>
+  <div><b>ジャンル</b><button class="on" data-f="genre" data-v="">すべて</button><button data-f="genre" data-v="その他">その他</button><button data-f="genre" data-v="演劇">演劇</button><button data-f="genre" data-v="音楽">音楽</button><button data-f="genre" data-v="吹奏楽">吹奏楽</button><button data-f="genre" data-v="バレエ">バレエ</button><button data-f="genre" data-v="舞踊">舞踊</button><button data-f="genre" data-v="式典">式典</button><button data-f="genre" data-v="合唱">合唱</button><button data-f="genre" data-v="ピアノ">ピアノ</button><button data-f="genre" data-v="ダンス">ダンス</button><button data-f="genre" data-v="邦楽">邦楽</button></div>
+</div>
+<div id="list"><article class="ev" data-pref="東京都" data-genre="その他" data-score="0">
+  <div class="d"><b>9/1</b><span>2026</span></div>
+  <div class="b">
+    <h3>第66回町田市書道連盟展</h3>
+    <div class="m1">町田市民ホール　第1ギャラリー第2ギャラリー　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　その他　｜　入場料: 不明</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="演劇" data-score="0">
+  <div class="d"><b>9/2</b><span>2026</span></div>
+  <div class="b">
+    <h3>ピアチェーレ めぐりあえた喜び</h3>
+    <div class="m1">町田市民ホール　和光大学ポプリホール鶴川　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　演劇　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="その他" data-score="0">
+  <div class="d"><b>9/2</b><span>2026</span></div>
+  <div class="b">
+    <h3>立川志の輔 独演会</h3>
+    <div class="m1">町田市民ホール　町田市民ホール　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　その他　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="音楽" data-score="0">
+  <div class="d"><b>9/3</b><span>2026</span></div>
+  <div class="b">
+    <h3>フォレスタコンサート in厚木</h3>
+    <div class="m1">厚木市文化会館　大ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 厚木市文化振興財団　｜　音楽　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="その他" data-score="0">
+  <div class="d"><b>9/4</b><span>2026</span></div>
+  <div class="b">
+    <h3>橋幸夫さん一周忌特別公演</h3>
+    <div class="m1">町田市民ホール　町田市民ホール　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　その他　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="その他" data-score="0">
+  <div class="d"><b>9/4</b><span>2026</span></div>
+  <div class="b">
+    <h3>神田伯山独演会</h3>
+    <div class="m1">町田市民ホール　和光大学ポプリホール鶴川　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　その他　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="その他" data-score="0">
+  <div class="d"><b>9/4</b><span>2026</span></div>
+  <div class="b">
+    <h3>綾小路きみまろ爆笑スーパーライブ2026</h3>
+    <div class="m1">厚木市文化会館　大ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 厚木市文化振興財団　｜　その他　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">継続</span></div>
+    <div class="prev">同じ主催団体として名寄せした直近の掲載: 2026年9月3日　厚木市文化会館（大ホール）　— 前回の開催から0か月</div>
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="千葉県" data-genre="吹奏楽" data-score="10">
+  <div class="d"><b>9/5</b><span>2026</span></div>
+  <div class="b">
+    <h3>やちよマミーズブラス ファミリーコンサート 2026</h3>
+    <div class="m1">八千代市市民会館　大ホール　<span class="pref">千葉県八千代市</span></div>
+    <div class="m2">主催: やちよマミーズブラス　｜　吹奏楽　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t seat">大ホール 1,260席</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://ycp.or.jp/civic_hall/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="音楽" data-score="0">
+  <div class="d"><b>9/5</b><span>2026</span></div>
+  <div class="b">
+    <h3>0歳からのオーケストラコンサート</h3>
+    <div class="m1">町田市民ホール　町田市民ホール　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　音楽　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="バレエ" data-score="0">
+  <div class="d"><b>9/5</b><span>2026</span></div>
+  <div class="b">
+    <h3>Aurora Ballet School スクールパフォーマンス</h3>
+    <div class="m1">たましんRISURUホール（立川市市民会館）　小ホール　<span class="pref">東京都立川市</span></div>
+    <div class="m2">主催: Aurora Ballet School　｜　バレエ　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://risuru.hall-info.jp/event/rental.html" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="舞踊" data-score="0">
+  <div class="d"><b>9/6</b><span>2026</span></div>
+  <div class="b">
+    <h3>元禄流 おさらい会</h3>
+    <div class="m1">町田市民ホール　町田市民ホール　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　舞踊　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="舞踊" data-score="0">
+  <div class="d"><b>9/8</b><span>2026</span></div>
+  <div class="b">
+    <h3>秋の踊りの集い</h3>
+    <div class="m1">町田市民ホール　町田市民ホール　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　舞踊　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="音楽" data-score="0">
+  <div class="d"><b>9/10</b><span>2026</span></div>
+  <div class="b">
+    <h3>小野リサ コンサート</h3>
+    <div class="m1">町田市民ホール　町田市民ホール　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　音楽　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="その他" data-score="0">
+  <div class="d"><b>9/12</b><span>2026</span></div>
+  <div class="b">
+    <h3>ライフスタイル展</h3>
+    <div class="m1">町田市民ホール　第1ギャラリー　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　その他　｜　入場料: 不明</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="音楽" data-score="0">
+  <div class="d"><b>9/12</b><span>2026</span></div>
+  <div class="b">
+    <h3>真夏のまちだ 音楽を浴びる日 音楽×○○ ～かけあわせる～</h3>
+    <div class="m1">町田市民ホール　町田市民ホール　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: 町田市民ホール　｜　音楽　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="その他" data-score="0">
+  <div class="d"><b>9/12</b><span>2026</span></div>
+  <div class="b">
+    <h3>【受託販売】立川晴の輔独演会2026【完売御礼】</h3>
+    <div class="m1">町田市民ホール　和光大学ポプリホール鶴川　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　その他　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="音楽" data-score="0">
+  <div class="d"><b>9/12</b><span>2026</span></div>
+  <div class="b">
+    <h3>家入レオ TOUR 2026 -Log:31-</h3>
+    <div class="m1">厚木市文化会館　大ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 厚木市文化振興財団　｜　音楽　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">継続</span></div>
+    <div class="prev">同じ主催団体として名寄せした直近の掲載: 2026年9月4日　厚木市文化会館（大ホール）　— 前回の開催から0か月</div>
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="音楽" data-score="0">
+  <div class="d"><b>9/12</b><span>2026</span></div>
+  <div class="b">
+    <h3>オータムコンサート（13日まで。）</h3>
+    <div class="m1">厚木市文化会館　小ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 株式会社厚木楽器　｜　音楽　｜　入場料: 不明</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="式典" data-score="0">
+  <div class="d"><b>9/12</b><span>2026</span></div>
+  <div class="b">
+    <h3>秋の交通安全運動 交通安全市民のつどい</h3>
+    <div class="m1">たましんRISURUホール（立川市市民会館）　大ホール　<span class="pref">東京都立川市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　式典　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://risuru.hall-info.jp/event/rental.html" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="岐阜県" data-genre="その他" data-score="0">
+  <div class="d"><b>9/12</b><span>2026</span></div>
+  <div class="b">
+    <h3>ウルトラヒーローズ THE LIVE ～オメガ・アーク・ブレーザー新世代ヒーロー集結～ in 岐阜</h3>
+    <div class="m1">不二羽島文化センター　スカイホール（大ホール）　<span class="pref">岐阜県羽島市</span></div>
+    <div class="m2">主催: サンデーフォークプロモーション　｜　その他　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://hashima-culture.jp/rental-event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="バレエ" data-score="0">
+  <div class="d"><b>9/13</b><span>2026</span></div>
+  <div class="b">
+    <h3>第21回 まちだバレエフェスティバル</h3>
+    <div class="m1">町田市民ホール　町田市民ホール　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　バレエ　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="音楽" data-score="0">
+  <div class="d"><b>9/13</b><span>2026</span></div>
+  <div class="b">
+    <h3>スガナミミュージックアカデミー発表会</h3>
+    <div class="m1">町田市民ホール　和光大学ポプリホール鶴川　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　音楽　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="その他" data-score="0">
+  <div class="d"><b>9/13</b><span>2026</span></div>
+  <div class="b">
+    <h3>厚木市制70周年記念映画 「キリコのタクト～YELL～」先行上映会</h3>
+    <div class="m1">厚木市文化会館　大ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 厚木市（企画政策課）　｜　その他　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="音楽" data-score="0">
+  <div class="d"><b>9/16</b><span>2026</span></div>
+  <div class="b">
+    <h3>若き演奏家による「水曜午後の音楽会」第112回</h3>
+    <div class="m1">町田市民ホール　和光大学ポプリホール鶴川　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: 和光大学ポプリホール鶴川　｜　音楽　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="その他" data-score="0">
+  <div class="d"><b>9/16</b><span>2026</span></div>
+  <div class="b">
+    <h3>パシャリコ！家族撮影会＆家計の相談会</h3>
+    <div class="m1">厚木市文化会館　集会室　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 株式会社ぷてら　｜　その他　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="合唱" data-score="0">
+  <div class="d"><b>9/16</b><span>2026</span></div>
+  <div class="b">
+    <h3>神奈川県立希望ヶ丘高等学校 合唱祭</h3>
+    <div class="m1">厚木市文化会館　大ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 神奈川県立希望ヶ丘高等学校　｜　合唱　｜　入場料: 不明</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="演劇" data-score="0">
+  <div class="d"><b>9/17</b><span>2026</span></div>
+  <div class="b">
+    <h3>第227回例会「命どぅ宝」</h3>
+    <div class="m1">町田市民ホール　町田市民ホール　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　演劇　｜　入場料: 不明</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="音楽" data-score="0">
+  <div class="d"><b>9/18</b><span>2026</span></div>
+  <div class="b">
+    <h3>Juice=Juice Room Tour 2026 「5ROOMS」</h3>
+    <div class="m1">厚木市文化会館　大ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 厚木市文化振興財団　｜　音楽　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">継続</span></div>
+    <div class="prev">同じ主催団体として名寄せした直近の掲載: 2026年9月12日　厚木市文化会館（大ホール）　— 前回の開催から0か月</div>
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="千葉県" data-genre="音楽" data-score="0">
+  <div class="d"><b>9/19</b><span>2026</span></div>
+  <div class="b">
+    <h3>音楽コンサート</h3>
+    <div class="m1">八千代市市民会館　小ホール　<span class="pref">千葉県八千代市</span></div>
+    <div class="m2">主催: スズキ音楽スタジオ　｜　音楽　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t seat">小ホール 437席</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://ycp.or.jp/civic_hall/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="その他" data-score="0">
+  <div class="d"><b>9/19</b><span>2026</span></div>
+  <div class="b">
+    <h3>建築家展</h3>
+    <div class="m1">町田市民ホール　第1ギャラリー第2ギャラリー　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　その他　｜　入場料: 不明</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="吹奏楽" data-score="0">
+  <div class="d"><b>9/19</b><span>2026</span></div>
+  <div class="b">
+    <h3>昭和薬科大学吹奏楽部 第55回定期演奏会</h3>
+    <div class="m1">町田市民ホール　町田市民ホール　<span class="pref">東京都町田市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　吹奏楽　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span></div>
+    
+    <div class="src"><a href="https://www.m-shimin-hall.jp/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="音楽" data-score="0">
+  <div class="d"><b>9/19</b><span>2026</span></div>
+  <div class="b">
+    <h3>浅野音楽教室第28回発表会</h3>
+    <div class="m1">厚木市文化会館　小ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 浅野音楽教室　｜　音楽　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="音楽" data-score="0">
+  <div class="d"><b>9/20</b><span>2026</span></div>
+  <div class="b">
+    <h3>第7回浪ちひろと一緒に歌の発表会</h3>
+    <div class="m1">厚木市文化会館　小ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 浪ちひろ後援会　｜　音楽　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="その他" data-score="0">
+  <div class="d"><b>9/20</b><span>2026</span></div>
+  <div class="b">
+    <h3>映画「親鸞 人生の目的」</h3>
+    <div class="m1">厚木市文化会館　集会室　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 歎異抄に学ぶ会　｜　その他　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="ピアノ" data-score="0">
+  <div class="d"><b>9/21</b><span>2026</span></div>
+  <div class="b">
+    <h3>第5回Musia海老名ピアノ教室発表会</h3>
+    <div class="m1">厚木市文化会館　小ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: ミュージア海老名ピアノ教室　｜　ピアノ　｜　入場料: 不明</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="ダンス" data-score="0">
+  <div class="d"><b>9/21</b><span>2026</span></div>
+  <div class="b">
+    <h3>ダンシングスターズコンテスト2026</h3>
+    <div class="m1">厚木市文化会館　大ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: ドラゴン株式会社　｜　ダンス　｜　入場料: 不明</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="千葉県" data-genre="邦楽" data-score="0">
+  <div class="d"><b>9/22</b><span>2026</span></div>
+  <div class="b">
+    <h3>公益財団財団法人日本民謡協会千葉県連合大会 日本民謡協会民謡コンクール及び研究発表会</h3>
+    <div class="m1">八千代市市民会館　小ホール　<span class="pref">千葉県八千代市</span></div>
+    <div class="m2">主催: 公益財団財団法人日本民謡協会千葉県連合会　｜　邦楽　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t seat">小ホール 437席</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://ycp.or.jp/civic_hall/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="千葉県" data-genre="音楽" data-score="0">
+  <div class="d"><b>9/23</b><span>2026</span></div>
+  <div class="b">
+    <h3>第１5回ただよしこ音楽教室発表会</h3>
+    <div class="m1">八千代市市民会館　小ホール　<span class="pref">千葉県八千代市</span></div>
+    <div class="m2">主催: ただよしこ音楽教室　｜　音楽　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t seat">小ホール 437席</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://ycp.or.jp/civic_hall/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="ダンス" data-score="0">
+  <div class="d"><b>9/23</b><span>2026</span></div>
+  <div class="b">
+    <h3>EXPG Presents LDH DREAM STAGE 2026</h3>
+    <div class="m1">厚木市文化会館　大ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 株式会社LDH JAPAN　｜　ダンス　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="千葉県" data-genre="合唱" data-score="0">
+  <div class="d"><b>9/27</b><span>2026</span></div>
+  <div class="b">
+    <h3>第１０回定期演奏会</h3>
+    <div class="m1">八千代市市民会館　小ホール　<span class="pref">千葉県八千代市</span></div>
+    <div class="m2">主催: 八千代男声合唱団　｜　合唱　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 1か月未満・直前</span><span class="t seat">小ホール 437席</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://ycp.or.jp/civic_hall/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="千葉県" data-genre="その他" data-score="10">
+  <div class="d"><b>10/2</b><span>2026</span></div>
+  <div class="b">
+    <h3>よしもとお笑いライブin八千代2026 ~秋の夜長を笑い飛ばせ！~</h3>
+    <div class="m1">八千代市市民会館　大ホール　<span class="pref">千葉県八千代市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　その他　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 約1か月・直前</span><span class="t seat">大ホール 1,260席</span></div>
+    
+    <div class="src"><a href="https://ycp.or.jp/civic_hall/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="音楽" data-score="0">
+  <div class="d"><b>10/3</b><span>2026</span></div>
+  <div class="b">
+    <h3>CRAZY KEN BAND TOUR ？ 2026-2027 Presented by NISHIHARA SHOKAI</h3>
+    <div class="m1">厚木市文化会館　大ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 厚木市文化振興財団　｜　音楽　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 約1か月・直前</span><span class="t cyc">継続</span></div>
+    <div class="prev">同じ主催団体として名寄せした直近の掲載: 2026年9月18日　厚木市文化会館（大ホール）　— 前回の開催から0か月</div>
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="千葉県" data-genre="音楽" data-score="0">
+  <div class="d"><b>10/4</b><span>2026</span></div>
+  <div class="b">
+    <h3>カラオケ大会</h3>
+    <div class="m1">八千代市市民会館　小ホール　<span class="pref">千葉県八千代市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　音楽　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 約1か月・直前</span><span class="t seat">小ホール 437席</span></div>
+    
+    <div class="src"><a href="https://ycp.or.jp/civic_hall/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="千葉県" data-genre="その他" data-score="10">
+  <div class="d"><b>10/7</b><span>2026</span></div>
+  <div class="b">
+    <h3>春風亭昇太・蝶花楼桃花・桂宮治 三人会</h3>
+    <div class="m1">八千代市市民会館　大ホール　<span class="pref">千葉県八千代市</span></div>
+    <div class="m2">主催: (株)エムエスティプロデュース　｜　その他　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 約1か月・直前</span><span class="t seat">大ホール 1,260席</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://ycp.or.jp/civic_hall/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="千葉県" data-genre="バレエ" data-score="0">
+  <div class="d"><b>10/7</b><span>2026</span></div>
+  <div class="b">
+    <h3>バレエ勉強会</h3>
+    <div class="m1">八千代市市民会館　小ホール　<span class="pref">千葉県八千代市</span></div>
+    <div class="m2">主催: バレエスタジオプリマヴェーラ　｜　バレエ　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 約1か月・直前</span><span class="t seat">小ホール 437席</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://ycp.or.jp/civic_hall/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="千葉県" data-genre="演劇" data-score="10">
+  <div class="d"><b>10/12</b><span>2026</span></div>
+  <div class="b">
+    <h3>人形劇団ひとみ座「ふしぎ駄菓子屋銭天堂」</h3>
+    <div class="m1">八千代市市民会館　大ホール　<span class="pref">千葉県八千代市</span></div>
+    <div class="m2">主催: 特定非営利活動法人子どもネット八千代　｜　演劇　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 約1か月・直前</span><span class="t seat">大ホール 1,260席</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://ycp.or.jp/civic_hall/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="音楽" data-score="0">
+  <div class="d"><b>10/17</b><span>2026</span></div>
+  <div class="b">
+    <h3>SID HALL TOUR 2026 ～Re:Quest～</h3>
+    <div class="m1">厚木市文化会館　大ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 厚木市文化振興財団　｜　音楽　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 約2か月・直前</span><span class="t cyc">継続</span></div>
+    <div class="prev">同じ主催団体として名寄せした直近の掲載: 2026年10月3日　厚木市文化会館（大ホール）　— 前回の開催から0か月</div>
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="東京都" data-genre="その他" data-score="0">
+  <div class="d"><b>10/21</b><span>2026</span></div>
+  <div class="b">
+    <h3>★よしもとお笑いライブin立川2026 ～たましい奮わす笑いをお届け～</h3>
+    <div class="m1">たましんRISURUホール（立川市市民会館）　大ホール　<span class="pref">東京都立川市</span></div>
+    <div class="m2">主催: <span class="none">公表なし／個人のため非掲載</span>　｜　その他　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 約2か月・直前</span></div>
+    
+    <div class="src"><a href="https://risuru.hall-info.jp/event/rental.html" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="演劇" data-score="0">
+  <div class="d"><b>10/24</b><span>2026</span></div>
+  <div class="b">
+    <h3>それいけ！アンパンマン ミュージカル 『まもれ！黄金の炎』</h3>
+    <div class="m1">厚木市文化会館　大ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 厚木市文化振興財団　｜　演劇　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 約2か月・直前</span><span class="t cyc">継続</span></div>
+    <div class="prev">同じ主催団体として名寄せした直近の掲載: 2026年10月17日　厚木市文化会館（大ホール）　— 前回の開催から0か月</div>
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="千葉県" data-genre="音楽" data-score="0">
+  <div class="d"><b>10/26</b><span>2026</span></div>
+  <div class="b">
+    <h3>THEカルテット 昭和歌謡コンサート</h3>
+    <div class="m1">八千代市市民会館　<span class="pref">千葉県八千代市</span></div>
+    <div class="m2">主催: マイソングエンタテイメント合同会社　｜　音楽　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 約2か月・直前</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://ycp.or.jp/civic_hall/event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="その他" data-score="0">
+  <div class="d"><b>11/15</b><span>2026</span></div>
+  <div class="b">
+    <h3>「おかあさんといっしょ」 ファンターネ！とあそぼPLUS(プラス)</h3>
+    <div class="m1">厚木市文化会館　大ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 厚木市文化振興財団　｜　その他　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 約2か月・直前</span><span class="t cyc">継続</span></div>
+    <div class="prev">同じ主催団体として名寄せした直近の掲載: 2026年10月24日　厚木市文化会館（大ホール）　— 前回の開催から1か月</div>
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="音楽" data-score="40">
+  <div class="d"><b>12/12</b><span>2026</span></div>
+  <div class="b">
+    <h3>東京グランド・ソロイスツ</h3>
+    <div class="m1">厚木市文化会館　大ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 厚木市文化振興財団　｜　音楽　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 約3か月・準備期</span><span class="t cyc">継続</span></div>
+    <div class="prev">同じ主催団体として名寄せした直近の掲載: 2026年11月15日　厚木市文化会館（大ホール）　— 前回の開催から1か月</div>
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="神奈川県" data-genre="音楽" data-score="40">
+  <div class="d"><b>12/20</b><span>2026</span></div>
+  <div class="b">
+    <h3>小椋佳 「歌紡ぎの会」</h3>
+    <div class="m1">厚木市文化会館　大ホール　<span class="pref">神奈川県厚木市</span></div>
+    <div class="m2">主催: 厚木市文化振興財団　｜　音楽　｜　入場料: 有料</div>
+    <div class="tags"><span class="t lead">本番まで 約4か月・準備期</span><span class="t cyc">継続</span></div>
+    <div class="prev">同じ主催団体として名寄せした直近の掲載: 2026年12月12日　厚木市文化会館（大ホール）　— 前回の開催から0か月</div>
+    <div class="src"><a href="https://atsugi-bunka.jp/events/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article><article class="ev" data-pref="岐阜県" data-genre="演劇" data-score="20">
+  <div class="d"><b>8/20</b><span>2027</span></div>
+  <div class="b">
+    <h3>劇団うりんこ「ジュン先生がやってきた！-３年１組ものがたり-」</h3>
+    <div class="m1">不二羽島文化センター　みのぎくホール（小ホール）　<span class="pref">岐阜県羽島市</span></div>
+    <div class="m2">主催: 公益社団法人岐阜南法人会 事務局　｜　演劇　｜　入場料: 無料</div>
+    <div class="tags"><span class="t lead">本番まで 約12か月・先行押さえ</span><span class="t cyc">本DB初出</span></div>
+    
+    <div class="src"><a href="https://hashima-culture.jp/rental-event/" target="_blank" rel="noopener noreferrer">出典: 館の催し物案内ページ →</a>　<span class="col">収集 2026-09-01</span></div>
+  </div>
+</article></div>
+<p class="lede" id="empty" style="display:none">この条件に当てはまる本番日はありません。</p>
+
+<h2>このサイトが載せているもの・載せていないもの</h2>
+<div class="note">
+  <h3>載せているもの</h3>
+  <ul>
+    <li>各館が催し物案内・貸館予定として自ら公開している、開催日・館名・ホール名・催事名・主催団体名・ジャンル・入場料の有無</li>
+    <li>館が公開している施設案内から機械的に読み取れた、そのホールの座席数</li>
+    <li>出典ページへのリンク（催事名と日付は、出典ページ本文に同じ文字列があることを確かめてから載せています）</li>
+  </ul>
+  <h3>載せていないもの</h3>
+  <ul>
+    <li>案内文・紹介文・出演者に関する情報などの本文（転記していません）</li>
+    <li>主催者の連絡先（電話番号・メールアドレス・住所）。主催者が個人名とみられるものは主催者欄を空にしています</li>
+    <li>本サイト独自の評価・格付け・売り込み。会員登録・決済・お問い合わせフォームも置いていません</li>
+  </ul>
+  <h3>「残月数」「開催サイクル」「座席数の変化」について</h3>
+  <p>いずれも上に掲載している公表済みの日付と座席数から機械的に計算した、並べ替えのための目安です。「復活」「毎年」は本データベースに集まっている範囲での前回掲載との間隔にすぎず、実際にはその間も開催されていることがあります。主催団体の発注予定・取引先の変更・契約状況を示すものではありません。</p>
+</div>
+
+</div></main>
+
+<footer><div class="wrap">
+  本サイトは、各公立文化ホール等が自らのウェブサイトで公開している催し物案内・貸館予定から、開催日・催事名・主催団体名などの事実のみを取り出して並べたものです。内容は収集時点のもので、日程変更・中止・様式のゆれによる読み取り誤りを完全には排除できません。ご利用の前に必ず出典リンク先の各館の公式ページをご確認ください。掲載している「残月数」「開催サイクル」「会場規模の変化」は、本サイトが公表情報から機械的に計算した並び替えのための目安であり、主催団体の発注予定・取引先の変更・契約状況を示すものではありません。本サイトは主催団体の連絡先を掲載せず、個人に関する情報も扱いません。掲載の取り下げ・訂正のご希望は出典元の館・主催団体からのお申し出に従います。
+  <br><br>掲載しているのは各館が公開している事実と出典リンクのみです。掲載の取り下げ・訂正は出典元の館・主催団体からのお申し出に従います。
+</div></footer>
+
+<script>
+(function(){
+  var f={pref:'',genre:''};
+  var list=document.getElementById('list'), empty=document.getElementById('empty');
+  function apply(){
+    var n=0;
+    list.querySelectorAll('.ev').forEach(function(el){
+      var ok=(!f.pref||el.dataset.pref===f.pref)&&(!f.genre||el.dataset.genre===f.genre);
+      el.classList.toggle('hide',!ok); if(ok)n++;
+    });
+    empty.style.display=n?'none':'block';
+  }
+  document.querySelectorAll('.filters button').forEach(function(b){
+    b.addEventListener('click',function(){
+      f[b.dataset.f]=b.dataset.v;
+      document.querySelectorAll('.filters button[data-f="'+b.dataset.f+'"]').forEach(function(x){x.classList.toggle('on',x===b);});
+      apply();
+    });
+  });
+})();
+</script>
+
+<script data-goatcounter="https://junikeda.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body></html>
